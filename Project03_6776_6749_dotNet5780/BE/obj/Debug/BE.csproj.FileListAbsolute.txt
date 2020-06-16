@@ -1,0 +1,12 @@
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\BE\bin\Debug\BE.dll
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\BE\bin\Debug\BE.pdb
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\BE\obj\Debug\BE.csprojAssemblyReference.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\BE\obj\Debug\BE.dll
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\BE\obj\Debug\BE.pdb
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\Project03_6776_6749_dotNet5780\BE\bin\Debug\BE.dll
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\Project03_6776_6749_dotNet5780\BE\bin\Debug\BE.pdb
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\Project03_6776_6749_dotNet5780\BE\obj\Debug\BE.csprojAssemblyReference.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\Project03_6776_6749_dotNet5780\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\Project03_6776_6749_dotNet5780\BE\obj\Debug\BE.dll
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\Project03_6776_6749_dotNet5780\BE\obj\Debug\BE.pdb

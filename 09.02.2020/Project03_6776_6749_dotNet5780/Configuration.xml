@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <runningNumberForHost>10000007</runningNumberForHost>
+  <runningNumberForHostingUnit>10000012</runningNumberForHostingUnit>
+  <runningNumberForGuestRequest>10000012</runningNumberForGuestRequest>
+  <runningNumberForOrder>10000006</runningNumberForOrder>
+  <fee>10</fee>
+  <numDaysExpire>10</numDaysExpire>
+  <lastUpdateOrders>24/02/2020 00:00:00</lastUpdateOrders>
+</Configuration>

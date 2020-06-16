@@ -1,0 +1,15 @@
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\bin\Debug\dotNet_5779_6749_6776.exe.config
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\bin\Debug\dotNet_5779_6749_6776.exe
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\bin\Debug\dotNet_5779_6749_6776.pdb
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.csprojAssemblyReference.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\MainWindow.g.cs
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\App.g.cs
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776_MarkupCompile.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776_MarkupCompile.lref
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\MainWindow.baml
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.g.resources
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.Properties.Resources.resources
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.csproj.GenerateResource.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.csproj.CoreCompileInputs.cache
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.exe
+D:\LUSTIG\SECONDYEAR\FIRSTSEMESTER\מיני פרויקט במערכת חלונות\תרגילי בית\פרוייקט חלק 3\new\dotNet_5779_6749_6776\dotNet_5779_6749_6776\obj\Debug\dotNet_5779_6749_6776.pdb

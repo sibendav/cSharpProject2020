@@ -1,0 +1,190 @@
+﻿<Window x:Class="PLWPF.GuestRequestWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="PineCone" Height="450" Width="668">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize"
+              Value="16" />
+            <Setter Property="FontFamily"
+              Value="Microsoft New Tai Lue" />
+            <Setter Property="FontWeight"
+              Value="Medium" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize"
+              Value="10" />
+            <Setter Property="FontFamily"
+              Value="Nirmala UI" />
+            <Setter Property="FontWeight"
+              Value="Medium" />
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="FontSize"
+              Value="10" />
+            <Setter Property="FontFamily"
+              Value="Microsoft New Tai Lue" />
+            <Setter Property="FontWeight"
+              Value="Medium" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,3.6,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="pictures/photo_2020-01-20_17-49-34.jpg"/>
+        </Grid.Background>
+        <GroupBox x:Name="grpGuestRequest" Header="Guest Request" HorizontalAlignment="Stretch" Height="352" VerticalAlignment="Top" Width="245" Margin="174,19,239,0" >
+            <Grid x:Name="gridGuestRequest" HorizontalAlignment="Left" Height="333" Margin="0,0,-3,-2.6" VerticalAlignment="Center" Width="235">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="307*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Private Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,7,0,0" Width="89" Height="25" />
+                <Label Content="Family Name:" HorizontalAlignment="Left" Margin="119,6,0,0" VerticalAlignment="Top" />
+                <Label Content="Email:" HorizontalAlignment="Left" Margin="14,64,0,0" VerticalAlignment="Top" Height="34"/>
+                <TextBox x:Name="txtPName" HorizontalAlignment="Left" Height="22" Margin="14,32,0,0" TextWrapping="Wrap" Text="{Binding Path=PrivateName, Mode=TwoWay}" VerticalAlignment="Top" Width="105"/>
+                <TextBox x:Name="txtFName" HorizontalAlignment="Left" Height="22" Margin="124,32,0,0" TextWrapping="Wrap" Text="{Binding Path=FamilyName , Mode=TwoWay}"  VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.562,-0.494" TextChanged="txtFName_TextChanged"/>
+                <TextBox x:Name="txtMail" HorizontalAlignment="Left" Height="20" Margin="69,64,0,0" TextWrapping="Wrap" Text="{Binding Path=MailAddress, Mode=TwoWay}" VerticalAlignment="Top" Width="160"/>
+                <DatePicker x:Name="datePicEntery" HorizontalAlignment="Left" Margin="14,108,0,0" VerticalAlignment="Top"  DataContext="{Binding Path=EntryDate, Mode=TwoWay}" Height="30" Width="105" SelectedDateChanged="datePicEntery_SelectedDateChanged"/>
+                <DatePicker x:Name="datePicRelease"  HorizontalAlignment="Left" Margin="124,108,0,0" VerticalAlignment="Top" DataContext="{Binding Path=ReleaseDate, Mode=TwoWay}" Height="30" Width="105" SelectedDateChanged="datePicRelease_SelectedDateChanged"/>
+                <ComboBox x:Name="cmbArea" HorizontalAlignment="Left" Margin="15,149,0,0" VerticalAlignment="Top" Width="102" Height="21" SelectedValue="{Binding Path=Area, Mode=TwoWay}" SelectionChanged="cmbArea_SelectionChanged"/>
+                <TextBox x:Name="txtSubArea" HorizontalAlignment="Left" Height="21" Margin="124,149,0,0" TextWrapping="Wrap" Text="{Binding Path=SubArea, Mode=TwoWay}" VerticalAlignment="Top" Width="103" FontSize="12"/>
+                <TextBox x:Name="txtAdults" HorizontalAlignment="Left" Height="20" Margin="68,201,0,0" TextWrapping="Wrap" Text="{Binding Path=Adults, Mode=TwoWay}" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.087,0.322"/>
+                <TextBox x:Name="txtChildrens" HorizontalAlignment="Left" Height="20" Margin="190,201,0,0" TextWrapping="Wrap" Text="{Binding Path=Children, Mode=TwoWay}" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.436,0.837"/>
+                <ComboBox x:Name="cmbResortType" HorizontalAlignment="Left" Margin="101,175,0,0" VerticalAlignment="Top" Width="127" Height="21" SelectedValue="{Binding Path=Type, Mode=TwoWay}" />
+                <ComboBox x:Name="cbmPool" HorizontalAlignment="Left" Margin="55,226,0,0" VerticalAlignment="Top" Width="50" Height="20" RenderTransformOrigin="0.167,0.641" SelectedValue="{Binding Path=Pool}" SelectionChanged="cbmPool_SelectionChanged" />
+                <ComboBox x:Name="cbmJacuzzi" HorizontalAlignment="Left" Margin="180,226,0,0" VerticalAlignment="Top" Width="47" Height="20" SelectedValue="{Binding Path=Jacuzzi, Mode=TwoWay}" />
+                <ComboBox x:Name="cbmGarden" HorizontalAlignment="Left" Margin="55,250,0,0" VerticalAlignment="Top" Width="49" Height="20" SelectedValue="{Binding Path=Garden, Mode=TwoWay}" />
+                <ComboBox x:Name="cbmChildernAtrac" HorizontalAlignment="Left" Margin="180,251,0,0" VerticalAlignment="Top" Width="47" Height="20" SelectedValue="{Binding Path=ChildrensAttractions, Mode=TwoWay}" />
+                <Label Content="Entry Date:" HorizontalAlignment="Left" Margin="12,84,0,0" VerticalAlignment="Top"  />
+                <Label Content="Release Date:" HorizontalAlignment="Left" Margin="126,84,0,0" VerticalAlignment="Top" />
+                <Label Content="Area:" HorizontalAlignment="Left" Margin="15,128,0,0" VerticalAlignment="Top" />
+                <Label Content="Sub Area:" HorizontalAlignment="Left" Margin="125,128,0,0" VerticalAlignment="Top"  />
+                <Label Content="Resort Type:" HorizontalAlignment="Left" Margin="12,175,0,0" VerticalAlignment="Top" Width="84"  />
+                <Label Content="Adults:" HorizontalAlignment="Left" Margin="14,200,0,0" VerticalAlignment="Top"  />
+                <Label Content="Childrens:" HorizontalAlignment="Left" Margin="110,200,0,0" VerticalAlignment="Top"  />
+                <Label Content="Pool:" HorizontalAlignment="Left" Margin="14,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.033,0.588"  />
+                <Label Content="Jacuzzi:" HorizontalAlignment="Left" Margin="110,224,0,0" VerticalAlignment="Top"  />
+                <Label Content="Garden:" HorizontalAlignment="Left" Margin="13,251,0,0" VerticalAlignment="Top"  RenderTransformOrigin="-2.583,-0.16"/>
+                <Label Content="Childrens Atraction:" HorizontalAlignment="Left" Margin="105,251,0,0" VerticalAlignment="Top" Width="65" />
+                <TextBox x:Name="txtUN" HorizontalAlignment="Left" Height="20" Margin="14,299,0,0" TextWrapping="Wrap" Text="{Binding Path=UserName}" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.087,0.322"/>
+                <Label x:Name="lblUN" Content="Choose UserName:" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" />
+                <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="20" Margin="126,299,0,0" TextWrapping="Wrap" Text="{Binding Path=Password}" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.087,0.322"/>
+                <Label x:Name="lblPass" Content="Choose password:" HorizontalAlignment="Left" Margin="124,271,0,0" VerticalAlignment="Top" FontSize="12"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Stretch" Margin="256,376,327,0" VerticalAlignment="Top" Width="75" Click="btnAdd_Click"/>
+        <Button x:Name= "btnExit" Content="Exit" HorizontalAlignment="Stretch" Margin="505,10,0,0" VerticalAlignment="Top" Width="75" Click="btnExit_Click"/>
+        <TabControl x:Name="tbCrlShow" HorizontalAlignment="Stretch" Height="334" Margin="10,34,20,52" VerticalAlignment="Stretch" RenderTransformOrigin="1,0.506" FontFamily="Segoe UI Historic" SelectionChanged="tbCrlShow_SelectionChanged">
+            <TabControl.Background>
+                <ImageBrush/>
+            </TabControl.Background>
+            <TabItem Header="General Information">
+                <Grid >
+                    <Grid Margin="0,0,0.4,-0.2" RenderTransformOrigin="1.001,0.502">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130*"/>
+                            <ColumnDefinition Width="503*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.Background>
+                            <ImageBrush/>
+                        </Grid.Background>
+                        <GroupBox x:Name="grpGI" Header="" HorizontalAlignment="Left" Height="248" Margin="23,26,0,0" VerticalAlignment="Top" Width="182" RenderTransformOrigin="0.555,0.491" Grid.ColumnSpan="2">
+                            <Grid HorizontalAlignment="Left" Height="244" Margin="0,-6,0,-12.4" VerticalAlignment="Top" Width="169">
+                                <Label x:Name="lblPas" Content="Private Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,0,0,0" Width="89" Height="25" />
+                                <Label x:Name="lbfn"  Content="Family Name:" HorizontalAlignment="Left" Margin="9,43,0,0" VerticalAlignment="Top" />
+                                <Label x:Name="lbemail"  Content="Email:" HorizontalAlignment="Left" Margin="9,89,0,0" VerticalAlignment="Top" Height="34"/>
+                                <TextBox x:Name="txtPName_Copy" IsEnabled="False" HorizontalAlignment="Left" Height="22" Margin="10,21,0,0" TextWrapping="Wrap" Text="{Binding Path=PrivateName, Mode=TwoWay}" VerticalAlignment="Top" Width="149"/>
+                                <TextBox x:Name="txtFName_Copy" IsEnabled="False" HorizontalAlignment="Left" Height="22" Margin="9,67,0,0" TextWrapping="Wrap" Text="{Binding Path=FamilyName, Mode=TwoWay}"  VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.562,-0.494" TextChanged="txtFName_TextChanged"/>
+                                <TextBox x:Name="txtMail_Copy" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="10,111,0,0" TextWrapping="Wrap" Text="{Binding Path=MailAddress, Mode=TwoWay}" VerticalAlignment="Top" Width="149"/>
+                                <Button x:Name="btnChangePassword" Visibility="Collapsed" Content="change your password" HorizontalAlignment="Left" Margin="31,146,0,0" VerticalAlignment="Top" Width="106" Height="19" FontSize="8" Click="btnChangePassword_Click">
+                                    <Button.BorderBrush>
+                                        <ImageBrush/>
+                                    </Button.BorderBrush>
+                                    <Button.Background>
+                                        <ImageBrush/>
+                                    </Button.Background>
+                                </Button>
+                                <TextBox x:Name="txtPass_Copy" Visibility="Collapsed" HorizontalAlignment="Left"  Height="20" Margin="9,191,0,0" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=TwoWay}" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.087,0.322"/>
+                                <Label x:Name="lblPass_Copy" Visibility="Collapsed" Content="Choose password:"   HorizontalAlignment="Left" Margin="9,170,0,0" VerticalAlignment="Top" FontSize="8"/>
+                                <Button x:Name="btnChangePasswordUpdate" Visibility="Collapsed" Content="Change"  HorizontalAlignment="Left" Margin="26,211,0,0" VerticalAlignment="Top" Width="106" Height="19" FontSize="8" Click="btnChangePasswordUpdate_Click">
+                                    <Button.BorderBrush>
+                                        <ImageBrush/>
+                                    </Button.BorderBrush>
+                                    <Button.Background>
+                                        <ImageBrush/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="All The Requests">
+                <Grid x:Name="grdAllGR" Loaded="grdAllGR_Loaded" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="444*"/>
+                        <ColumnDefinition Width="179*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush/>
+                    </Grid.Background>
+                    <GroupBox x:Name="grpGR" Header="Guest Request" HorizontalAlignment="Left" Height="248" Margin="353.254,10,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Grid.Column="1">
+                        <Grid HorizontalAlignment="Left" Height="238" Margin="0,-6,-3.4,-6.4" VerticalAlignment="Top" Width="237">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="107*"/>
+                                <ColumnDefinition Width="121*"/>
+                            </Grid.ColumnDefinitions>
+                            <DatePicker x:Name="datePicEntery_Copy" HorizontalAlignment="Left" Margin="2.2,35,0,0" VerticalAlignment="Top"  SelectedDate="{Binding Path=EntryDate, Mode=TwoWay}" DisplayDate="{Binding Path=EntryDate}" Height="26" Width="105" SelectedDateChanged="datePicEntery_Copy_SelectedDateChanged" Grid.Column="1"/>
+                            <DatePicker x:Name="datePicRelease_Copy"  HorizontalAlignment="Left" Margin="5,35,0,0" VerticalAlignment="Top" SelectedDate="{Binding Path=ReleaseDate, Mode=TwoWay}" DisplayDate="{Binding Path=ReleaseDate}" Height="26" Width="105" SelectedDateChanged="datePicRelease_Copy_SelectedDateChanged" Grid.Column="2"/>
+                            <ComboBox x:Name="cmbArea_Copy" HorizontalAlignment="Left" Margin="3.2,76,0,0" VerticalAlignment="Top" Width="102" Height="21" SelectedValue="{Binding Path=Area, Mode=TwoWay}" SelectionChanged="cmbArea_SelectionChanged" Grid.Column="1"/>
+                            <TextBox x:Name="txtSubArea_Copy" HorizontalAlignment="Left" Height="21" Margin="5.4,76,0,0" TextWrapping="Wrap" Text="{Binding Path=SubArea, Mode=TwoWay}" VerticalAlignment="Top" Width="103" FontSize="12" Grid.Column="2"/>
+                            <TextBox x:Name="txtAdults_Copy" HorizontalAlignment="Left" Height="20" Margin="56.2,128,0,0" TextWrapping="Wrap" Text="{Binding Path=Adults, Mode=TwoWay}" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.087,0.322" Grid.Column="1"/>
+                            <TextBox x:Name="txtChildrens_Copy" HorizontalAlignment="Left" Height="20" Margin="72.4,128,0,0" TextWrapping="Wrap" Text="{Binding Path=Children, Mode=TwoWay}" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.436,0.837" Grid.Column="2"/>
+                            <ComboBox x:Name="cmbResortType_Copy" HorizontalAlignment="Left" Margin="89.2,102,0,0" VerticalAlignment="Top" Width="127" Height="20" SelectedValue="{Binding Path=Type, Mode=TwoWay}" Grid.Column="1" Grid.ColumnSpan="2" />
+                            <ComboBox x:Name="cbmPool_Copy" HorizontalAlignment="Left" Margin="43.2,153,0,0" VerticalAlignment="Top" Width="50" Height="20" RenderTransformOrigin="0.167,0.641" SelectedValue="{Binding Path=Pool, Mode=TwoWay}" SelectionChanged="cbmPool_SelectionChanged" Grid.Column="1" />
+                            <ComboBox x:Name="cbmJacuzzi_Copy" HorizontalAlignment="Left" Margin="61.4,153,0,0" VerticalAlignment="Top" Width="47" Height="20" SelectedValue="{Binding Path=Jacuzzi, Mode=TwoWay}" Grid.Column="2" />
+                            <ComboBox x:Name="cbmGarden_Copy" HorizontalAlignment="Left" Margin="43.2,177,0,0" VerticalAlignment="Top" Width="49" Height="20" SelectedValue="{Binding Path=Garden, Mode=TwoWay}" Grid.Column="1" />
+                            <ComboBox x:Name="cbmChildernAtrac_Copy" HorizontalAlignment="Left" Margin="61.4,178,0,0" VerticalAlignment="Top" Width="47" Height="20" SelectedValue="{Binding Path=ChildrensAttractions, Mode=TwoWay}" Grid.Column="2" />
+                            <Label Content="Entry Date:" HorizontalAlignment="Left" Margin="0.2,11,0,0" VerticalAlignment="Top" Grid.Column="1"  />
+                            <Label Content="Release Date:" HorizontalAlignment="Left" Margin="7.4,11,0,0" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Content="Area:" HorizontalAlignment="Left" Margin="3.2,55,0,0" VerticalAlignment="Top" Grid.Column="1" />
+                            <Label Content="Sub Area:" HorizontalAlignment="Left" Margin="6.4,55,0,0" VerticalAlignment="Top" Grid.Column="2"  />
+                            <Label Content="Resort Type:" HorizontalAlignment="Left" Margin="0.2,102,0,0" VerticalAlignment="Top" Width="84" Grid.Column="1"  />
+                            <Label Content="Adults:" HorizontalAlignment="Left" Margin="2.2,127,0,0" VerticalAlignment="Top" Grid.Column="1"  />
+                            <Label Content="Childrens:" HorizontalAlignment="Left" Margin="98.2,127,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"  />
+                            <Label Content="Pool:" HorizontalAlignment="Left" Margin="2.2,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.033,0.588" Grid.Column="1"  />
+                            <Label Content="Jacuzzi:" HorizontalAlignment="Left" Margin="98.2,151,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"  />
+                            <Label Content="Garden:" HorizontalAlignment="Left" Margin="1.2,178,0,0" VerticalAlignment="Top"  RenderTransformOrigin="-2.583,-0.16" Grid.Column="1"/>
+                            <Label Content="Childrens Atraction:" HorizontalAlignment="Left" Margin="93.2,178,0,0" VerticalAlignment="Top" Width="65" Grid.Column="1" Grid.ColumnSpan="2" />
+                            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="73.2,206,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="btnAddNew" Content="Add" HorizontalAlignment="Left" Margin="2.4,272,0,0" VerticalAlignment="Top" Width="75" Click="btnAddNew_Click" Grid.Column="2"/>
+                    <Button x:Name="btnWantToAddNew" Content="New Request" HorizontalAlignment="Left" Margin="227.254,263,0,0" VerticalAlignment="Top" Width="107" Click="btnWantToAddNew_Click" Height="23" Grid.Column="1"/>
+                    <DataGrid x:Name="dgrAllGR" HorizontalAlignment="Left" Height="234" Margin="10.254,24,0,0" AutoGenerateColumns="False" VerticalAlignment="Top" Width="324" SelectionChanged="dgrAllGR_SelectionChanged" Grid.Column="1">
+                        <DataGrid.Background>
+                            <ImageBrush/>
+                        </DataGrid.Background>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="CreateDate" Binding="{Binding Path=RegistrationDate,StringFormat=d}"/>
+                            <DataGridTextColumn Header="Area" Binding="{Binding Path=Area}"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Path=Type}"/>
+                            <DataGridTextColumn Header="EntryDate" Binding="{Binding Path=EntryDate, StringFormat=d}"/>
+                            <DataGridTextColumn Header="ReleaseDate" Binding="{Binding Path=ReleaseDate, StringFormat=d}"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
+

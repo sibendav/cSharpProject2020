@@ -1,0 +1,173 @@
+﻿<Window x:Class="PLWPF.HostWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="HostWin" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pictures/photo_2020-01-20_17-49-34.jpg"/>
+        </Grid.Background>
+        <TabControl HorizontalAlignment="Stretch" Margin="25,10,205.6,10" VerticalAlignment="Stretch" Width="563" SelectionChanged="TabControl_SelectionChanged">
+            <TabControl.Background>
+                <ImageBrush/>
+            </TabControl.Background>
+            <TabItem x:Name="tbHost" Header="Host Details" Margin="0,0,-53,-2">
+                <TabItem.Background>
+                    <ImageBrush/>
+                </TabItem.Background>
+                <Grid Margin="0,0,-0.4,-20.2">
+                    <Grid.Background>
+                        <ImageBrush/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox x:Name="grpBHostD" Header="Host Details" HorizontalAlignment="Left" Height="345" Margin="19,0,0,0" VerticalAlignment="Top" Width="279">
+                        <Grid HorizontalAlignment="Left" Height="321" Margin="0,0,-3.4,0" VerticalAlignment="Top" Width="269">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="14*"/>
+                                <ColumnDefinition Width="245*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Private Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,4,0,0" Width="100" Height="27" Grid.Column="2"/>
+                            <Label Content="Family Name:" HorizontalAlignment="Left" Margin="107,4,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="82"/>
+                            <Label Content="Email:" HorizontalAlignment="Left" Margin="6,84,0,0" VerticalAlignment="Top" Height="25" Grid.Column="2" Width="42"/>
+                            <TextBox x:Name="txtPName" HorizontalAlignment="Left" Height="22" Margin="2,29,0,0" TextWrapping="Wrap" Text="{Binding Path=PrivateName}" VerticalAlignment="Top" Width="101" Grid.Column="2"/>
+                            <TextBox x:Name="txtFName" HorizontalAlignment="Left" Height="22" Margin="107,29,0,0" TextWrapping="Wrap" Text="{Binding Path=FamilyName}" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.562,-0.494" Grid.Column="2"/>
+                            <TextBox x:Name="txtMail" HorizontalAlignment="Left" Height="20" Margin="52,84,0,0" TextWrapping="Wrap" Text="{Binding Path=MailAddress}" VerticalAlignment="Top" Width="160" Grid.Column="2"/>
+                            <Label Content="Phone Number:" HorizontalAlignment="Left" Margin="2,53,0,0" VerticalAlignment="Top" Height="34" Grid.Column="2" Width="93"/>
+                            <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="20" Margin="95,57,0,0" TextWrapping="Wrap" Text="{Binding Path=PhoneNumber}" VerticalAlignment="Top" Width="117" Grid.Column="2" />
+                            <GroupBox x:Name="grdBB" Header="Bank Details" HorizontalAlignment="Left" Height="123" Margin="2,109,0,0" VerticalAlignment="Top" Width="215" Grid.Column="2">
+                                <Grid HorizontalAlignment="Left" Height="108" Margin="0,0,-2.6,-22.4" VerticalAlignment="Top" Width="205">
+                                    <TextBox x:Name="txtNumberBank" HorizontalAlignment="Left" Height="22" Margin="156,79,0,0" TextWrapping="Wrap" Text="{Binding Path=Owner.BankBranchDetails.BranchNumber}" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.451,2" TextChanged="txtNumberBank_TextChanged"/>
+                                    <ComboBox x:Name="cbBank" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="141" SelectedValue="{Binding Path=Owner.BankBranchDetails.BankName}" SelectionChanged="cbBank_SelectionChanged"/>
+                                    <Label Content="Choose your bank" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Address:" HorizontalAlignment="Left" Margin="2,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.338,0.578"/>
+                                    <Label Content="City:" HorizontalAlignment="Left" Margin="17,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,0.672" Height="26"/>
+                                    <Label Content="Number:" HorizontalAlignment="Left" Margin="147,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                                        <Label.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform AngleX="1.66"/>
+                                                <RotateTransform/>
+                                                <TranslateTransform X="0.371"/>
+                                            </TransformGroup>
+                                        </Label.RenderTransform>
+                                    </Label>
+                                    <TextBox x:Name="txtNumberBank_Copy" HorizontalAlignment="Left" Height="24" Margin="156,27,0,0" TextWrapping="Wrap" Text="{Binding Path=Owner.BankBranchDetails.BankNumber}" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.451,2" TextChanged="txtNumberBank_Copy_TextChanged"/>
+                                    <Label Content="Number:" HorizontalAlignment="Left" Margin="147,4,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                                        <Label.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform AngleX="1.66"/>
+                                                <RotateTransform/>
+                                                <TranslateTransform X="0.371"/>
+                                            </TransformGroup>
+                                        </Label.RenderTransform>
+                                    </Label>
+                                    <ComboBox x:Name="cbCity" HorizontalAlignment="Left" Margin="56,54,0,0" VerticalAlignment="Top" Width="95" SelectedValue="{Binding Path=Owner.BankBranchDetails.BranchCity}" SelectionChanged="cbCity_SelectionChanged"/>
+                                    <ComboBox x:Name="cbAddress" HorizontalAlignment="Left" Margin="56,79,0,0" VerticalAlignment="Top" Width="95" SelectedValue="{Binding Path=Owner.BankBranchDetails.BranchAddress}" SelectionChanged="cbAddress_SelectionChanged"/>
+                                </Grid>
+                            </GroupBox>
+                            <TextBox x:Name="txtBankNum" HorizontalAlignment="Left" Height="20" Margin="95,237,0,0" TextWrapping="Wrap" Text="{Binding Path=BankAccountNumber}" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.27,7.54" TextChanged="txtBankNum_TextChanged" Grid.Column="2"/>
+                            <CheckBox x:Name="chbCollectionClearance" Content="Collection Clearance" HorizontalAlignment="Left" IsChecked="{Binding Path=CollectionClearance}" VerticalAlignment="Top" Margin="6,262,0,0" Width="159" Grid.Column="2" Height="15"/>
+                            <Label Content="Bank Account" HorizontalAlignment="Left" Margin="2,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.021,0.547" Grid.Column="2" Height="26" Width="83"/>
+                            <Label Content="UserName" HorizontalAlignment="Left" Margin="1,275,0,0" VerticalAlignment="Top" Height="26" Width="76" Grid.Column="2"/>
+                            <TextBox x:Name="txyUN" HorizontalAlignment="Left" Height="23" Margin="2,296,0,0" TextWrapping="Wrap" Text="{Binding UserName}" VerticalAlignment="Top" Width="101" Grid.Column="2"/>
+                            <Label Content="Password" HorizontalAlignment="Left" Margin="108,274,0,0" VerticalAlignment="Top" Height="26" Width="76" Grid.Column="2"/>
+                            <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="108,296,0,0" TextWrapping="Wrap" Text="{Binding Password}" VerticalAlignment="Top" Width="104" Grid.Column="2"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="btnAddNew" Content="Add First HostingUnit" HorizontalAlignment="Left" Margin="83,350,0,0" VerticalAlignment="Top" Width="135" Click="btnAddNew_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbHU" Header="Hosting Units" Margin="0,0,-53.4,-2" HorizontalAlignment="Right" Width="110" MouseEnter="tbHU_MouseEnter">
+                <TabItem.Background>
+                    <ImageBrush/>
+                </TabItem.Background>
+
+                <Grid Margin="0,0,-1.6,0.2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="262*"/>
+                        <ColumnDefinition Width="270*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblInstructions" Content="All The Hosting Units:" HorizontalAlignment="Left" Margin="23,7,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
+                    <GroupBox Header="HostingUnitDetails" HorizontalAlignment="Left" Height="318" Margin="3.4,0,0,0" VerticalAlignment="Top" Width="243" Grid.Column="2">
+                        <Grid HorizontalAlignment="Left" Height="308" VerticalAlignment="Top" Width="233" Margin="0,0,-2.6,-12">
+                            <TextBox x:Name="txtHUName" HorizontalAlignment="Left" Height="23" Margin="127,10,0,0" TextWrapping="Wrap" Text="{Binding Path=HostingUnitName}" VerticalAlignment="Top" Width="96"/>
+                            <Viewbox HorizontalAlignment="Left" Height="100" Margin="13,198,0,0" VerticalAlignment="Top" Width="120">
+                                <Calendar x:Name="cldrDiary" SelectedDate="{Binding Path=Diary}" Width="185" Height="166"/>
+                            </Viewbox>
+                            <ComboBox x:Name="cmbType" HorizontalAlignment="Left" Margin="127,38,0,0" SelectedValue="{Binding Path=Type}" VerticalAlignment="Top" Width="96" SelectionChanged="cmbType_SelectionChanged"/>
+                            <ComboBox x:Name="cmbArea" HorizontalAlignment="Left" Margin="127,65,0,0" SelectedValue="{Binding Path=Area}" VerticalAlignment="Top" Width="96" SelectionChanged="cmbArea_SelectionChanged"/>
+                            <TextBox x:Name="txtKids" HorizontalAlignment="Left" Height="23" Margin="127,107,0,0" TextWrapping="Wrap" Text="{Binding Path=Children}" VerticalAlignment="Top" Width="96"/>
+                            <TextBox x:Name="txtAdults" HorizontalAlignment="Left" Height="23" Margin="10,107,0,0" TextWrapping="Wrap" Text="{Binding Path=Adults}" VerticalAlignment="Top" Width="96"/>
+                            <CheckBox x:Name="ckbPool" Content="Pool" HorizontalAlignment="Left" IsChecked="{Binding Path=Pool}" Margin="10,135,0,0" VerticalAlignment="Top" Width="96"/>
+                            <CheckBox x:Name="ckbKidAtra" Content="Kid's Atraction" IsChecked="{Binding Path=ChildrensAttractions}" HorizontalAlignment="Left" Margin="127,159,0,0" VerticalAlignment="Top" Width="96"/>
+                            <CheckBox x:Name="ckbJacuzzi" Content="Jacuzzi" IsChecked="{Binding Path=Jacuzzi}" HorizontalAlignment="Left" Margin="127,135,0,0" VerticalAlignment="Top" Width="96"/>
+                            <CheckBox x:Name="ckbGarden" Content="Garden" IsChecked="{Binding Path=Garden}" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="96"/>
+                            <Label Content="Hosting Unit Name:" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="117"/>
+                            <Label Content="Resort Type:" HorizontalAlignment="Left" Margin="12,38,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Area:" HorizontalAlignment="Left" Margin="13,64,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Kid's Capacity:" HorizontalAlignment="Left" Margin="127,87,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Adult's Capacity:" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Diary:" HorizontalAlignment="Left" Margin="13,174,0,0" VerticalAlignment="Top"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="btnAdd" Content="add" HorizontalAlignment="Left" Margin="88.2,323,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="btnAdd_Click" Grid.Column="2"/>
+                    <Button x:Name="btnUpdate" Content="update" HorizontalAlignment="Left" Margin="3.2,323,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" Grid.Column="2"/>
+                    <Button x:Name="btnDelete" Content="delete" HorizontalAlignment="Left" Margin="171.2,323,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Grid.Column="2"/>
+                    <DataGrid x:Name="DtgrdAllHU" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="161" Margin="23,38,0,0" VerticalAlignment="Top" Width="252" SelectionChanged="DtgrdAllHU_SelectionChanged" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Path=HostingUnitName}"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Path=Type}"/>
+                            <DataGridTextColumn Header="Area" Binding="{Binding Path=Area}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnAddNewHost" Content="Add new HostingUnit" HorizontalAlignment="Left" Margin="118.8,199,0,0" VerticalAlignment="Top" Width="129" Click="btnAddNewHost_Click" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbPotOrd" Header="Potentionial Orders" Margin="0,0,-53.2,-2" HorizontalAlignment="Right" Width="132" MouseEnter="tbPotOrd_MouseEnter">
+                <TabItem.Background>
+                    <ImageBrush/>
+                </TabItem.Background>
+                <Grid Margin="0,0,-0.4,-0.2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="41*"/>
+                        <ColumnDefinition Width="238*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnSendMail" Content="Send Mail" HorizontalAlignment="Left" Margin="304.892,180,0,0" VerticalAlignment="Top" Width="75" Height="29" RenderTransformOrigin="-0.149,0.572" Grid.Column="1" IsEnabled="False" Click="btnSendMail_Click"/>
+                    <Button x:Name="btnTryToCloseADeal" Content="Deal Closed" HorizontalAlignment="Left" Margin="304.892,214,0,0" VerticalAlignment="Top" Width="75" Height="29" Grid.Column="1" IsEnabled="False" Click="btnTryToCloseADeal_Click"/>
+                    <DataGrid x:Name="dtgrdMatchingGR" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="135" Margin="10,34,0,0" VerticalAlignment="Top" Width="372" Grid.ColumnSpan="2" SelectionChanged="dtgrdMatchingGR_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="CreateDate" Binding="{Binding Path=RegistrationDate,StringFormat=d}"/>
+                            <DataGridTextColumn Header="Area" Binding="{Binding Path=Area}"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Path=Type}"/>
+                            <DataGridTextColumn Header="EntryDate" Binding="{Binding Path=EntryDate, StringFormat=d}"/>
+                            <DataGridTextColumn Header="ReleaseDate" Binding="{Binding Path=ReleaseDate, StringFormat=d}"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid x:Name="dtgrdOrders" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="163" Margin="10,180,0,0" VerticalAlignment="Top" Width="372" Grid.ColumnSpan="2" SelectionChanged="dtgrdOrders_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Order Num#" Binding="{Binding Path=OrderKey}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Path=HostingUnitName}"/>
+                            <DataGridTextColumn Header="Create Date" Binding="{Binding Path=CreateDate,StringFormat=d}"/>
+                            <DataGridTextColumn Header="Order Date" Binding="{Binding Path=OrderDate,StringFormat=d}"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnCreateOr" Content="Create Order" HorizontalAlignment="Left" Height="31" Margin="304.892,34,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" IsEnabled="False" Click="btnCreateOr_Click"/>
+                    <Button x:Name="btnFindMatch" Content="Find Maches" HorizontalAlignment="Left" Height="19" Margin="65.892,10,0,0" VerticalAlignment="Top" Width="77" Click="btnFindMatch_Click" Grid.Column="1" IsEnabled="False" />
+                    <ComboBox x:Name="cmbHU" HorizontalAlignment="Left" Margin="10,10,0,0" SelectedValue="{Binding Path=HostingUnitName}" VerticalAlignment="Top" Width="133" Height="19" SelectionChanged="cmbHU_SelectionChanged" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Button x:Name= "btnExit" Content="Exit" HorizontalAlignment="Left" Margin="505,10,0,0" VerticalAlignment="Top" Width="75" Click="btnExit_Click"/>
+    </Grid>
+</Window>
